@@ -23,9 +23,11 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="/about"><span class="glyphicon glyphicon-info-sign"></span> Über</a></li>
-					<li><a href="/events"><span class="glyphicon glyphicon-calendar"></span> Termine</a></li>
-					<li><a href="/contact"><span class="glyphicon glyphicon-envelope"></span> Kontakt</a></li>
+					{% for entry in site.navigation %}
+					<li{% if page.url == entry.url %} class="active"{% endif %}>
+					    <a href="{{entry.url}}"><span class="glyphicon glyphicon-{{entry.icon}}"></span> {{entry.text}}</a>
+					</li>
+					{% endfor %}
 				</ul>
 			</div>
 		</div>
