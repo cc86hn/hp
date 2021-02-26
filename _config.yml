@@ -1,0 +1,11 @@
+permalink: pretty
+navigation:
+ - text: Über den Verein
+   icon: info-sign
+   url: /about/
+ - text: Termine
+   icon: calendar
+   url: /events/
+ - text: Kontakt
+   icon: envelope
+   url: /contact/
