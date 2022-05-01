@@ -5,14 +5,14 @@ jobs:
   jekyll:
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v2
-     - uses: actions/cache@v2
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v2
       with:
         path: vendor/bundle
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
         restore-keys: |
           ${{ runner.os }}-gems-
-     - uses: helaili/jekyll-action@2.3.1
+    - uses: helaili/jekyll-action@2.3.1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         target_branch: 'gh-pages'
