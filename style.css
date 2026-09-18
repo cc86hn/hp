@@ -26,6 +26,9 @@ body {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 17px;
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1,
@@ -65,11 +68,11 @@ section {
 /*Styles für den Header*/
 
 header.site {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  background: var(--bg-dark);
-  border-bottom: 1px solid var(--line-dark);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: var(--bg-dark);
+    border-bottom: 1px solid var(--line-dark);
 }
 
 .navbar {
@@ -343,6 +346,7 @@ header.site {
 
 /* Footer Style*/
 footer.site {
+    width: 100%;
     background: var(--bg-dark);
     color: rgba(237, 230, 216, 0.55);
     padding: 26px 0;
@@ -355,4 +359,32 @@ footer.site .wrap {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 8px;
+}
+
+/* Datenschutz und Impressum style */
+#legalNotice{
+    flex: 1 0 auto;
+}
+
+#legalNotice,
+#privacyPolicy{
+    border: none ;
+}
+
+.noticeGird,
+.policyGird {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.noticeContent#Disclaimer{
+    margin-top: 50px;
+}
+
+.noticeContent,
+.policyContent {
+    border: 1px solid var(--line-dark);
+    padding: 26px;
+    background: var(--bg-dark-2);
 }
