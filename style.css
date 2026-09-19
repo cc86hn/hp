@@ -388,3 +388,10 @@ footer.site .wrap {
     padding: 26px;
     background: var(--bg-dark-2);
 }
+
+/* direction Styles */
+#direction{
+    overflow: hidden;
+    padding: 0 1em;
+    width: min-content;
+}
